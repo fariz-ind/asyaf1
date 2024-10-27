@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('image/gambar.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.navbar {
+    background-color: rgba(128, 128, 128, 0.1); /* Abu-abu dengan opasitas 10% */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+}
+
+.navbar.scrolled {
+    background-color: rgba(128, 128, 128, 0.9); /* Abu-abu dengan opasitas 90% */
+}
+
+body {
+    padding-top: 80px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #cccccc;
+    padding: 20px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: rgba(35, 35, 35, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-img {
+    width: 200px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #d4af37;
+}
+
+.details p, .skills ul {
+    margin: 15px 0;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills ul li {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Mengatur navbar menjadi kolom pada perangkat kecil */
+        width: 100%; /* Memastikan navbar mengambil lebar penuh */
+        text-align: center; /* Menyelaraskan teks ke tengah */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0; /* Mengurangi padding pada mobile */
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
